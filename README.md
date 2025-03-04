@@ -72,3 +72,18 @@
       * Window 는 true 설정 (커밋 시 LF 변환)
       * $ git config --global core.autocrlf true
 
+## Craco (Create-React-App Configuration Override)
+* React 프로젝트에서 Webpack의 경로 alias 설정을 쉽게 적용할 수 있도록 도와주는 라이브러리
+  * ../../Button 대신 @components/Button 사용
+* $ yarn add -D @craco/craco craco-alias
+* craco.config.js 생성
+* tsconfig.paths.json 생성
+* package.json의 scripts craco 로 수정
+
+## sass (Syntactically Awesome Stylesheets)
+* CSS를 더 강력하고 효율적으로 작성할 수 있도록 도와주는 CSS 확장 언어
+* 변수, 중첩(Nesting), 믹스인(Mixins) 등의 기능 지원
+* $ yarn add classnames sass
+* classNames.bind 사용
+  * SCSS Module을 사용할 때 동적으로 클래스를 관리할 수 있도록 도와주는 함수
+  * cx()를 통해 CSS Module의 클래스명을 안전하게 적용
