@@ -72,7 +72,7 @@
       * Window 는 true 설정 (커밋 시 LF 변환)
       * $ git config --global core.autocrlf true
 
-## Craco (Create-React-App Configuration Override)
+### Craco (Create-React-App Configuration Override)
 * React 프로젝트에서 Webpack의 경로 alias 설정을 쉽게 적용할 수 있도록 도와주는 라이브러리
   * ../../Button 대신 @components/Button 사용
 * $ yarn add -D @craco/craco craco-alias
@@ -80,10 +80,30 @@
 * tsconfig.paths.json 생성
 * package.json의 scripts craco 로 수정
 
-## sass (Syntactically Awesome Stylesheets)
+### sass (Syntactically Awesome Stylesheets)
 * CSS를 더 강력하고 효율적으로 작성할 수 있도록 도와주는 CSS 확장 언어
 * 변수, 중첩(Nesting), 믹스인(Mixins) 등의 기능 지원
 * $ yarn add classnames sass
 * classNames.bind 사용
   * SCSS Module을 사용할 때 동적으로 클래스를 관리할 수 있도록 도와주는 함수
   * cx()를 통해 CSS Module의 클래스명을 안전하게 적용
+ 
+### JSON Server 사용
+* https://github.com/typicode/json-server
+* REST API를 손쉽게 구축할 수 있는 툴로, JSON 파일을 데이터베이스처럼 활용하여 CRUD API를 자동 생성
+* $ yarn add -D json-server
+* 실시간 변경을 반영을 위해 watch 사용
+  * package.json > scripts
+
+## 폰트
+* 폰트를 src 디렉토리에 추가
+* => 번들링 과정에서 포함되어 애플리케이션과 함께 배포되며, 이를 통해 폰트 로딩 최적화 및 캐싱 전략을 적용
+* 무료 폰트 다운
+  * https://hangeul.naver.com/fonts
+* 폰트 포멧 변경
+  * https://cloudconvert.com/ttf-converter
+* `WOFF` 또는 `WOFF2` 사용 => WOFF2 지원하지 않는 버전 많아서 지원안하는 경우 WOFF 사용으로 로직추가
+  * 압축 지원 (TTF/OTF보다 용량 작음)
+* font 일반/bold 등 여러개있을때
+  * @font-face 를 여러개 선언하여 font-weight: normal과 font-weight: bold를 분리
+  * SCSS에서 font-weight: bold를 지정하면 자동으로 NanumGothicBold 적용
