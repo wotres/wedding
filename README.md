@@ -107,3 +107,30 @@
 * font 일반/bold 등 여러개있을때
   * @font-face 를 여러개 선언하여 font-weight: normal과 font-weight: bold를 분리
   * SCSS에서 font-weight: bold를 지정하면 자동으로 NanumGothicBold 적용
+* 글꼴이 다이나믹하게 바뀌는 경우 => font-size 적용하면 됨
+
+## 이미지
+* https://www.iconfinder.com/
+* 무료 이미지 선택
+
+## animation
+* css
+  * animation: [keyframes-name] [duration] [iteration-count] [timing-function]
+    * keyframes-name: @keyframes에서 정의한 애니메이션 이름
+    * duration: 애니메이션의 지속 시간
+    * iteration-count: 애니메이션 반복 횟수
+    * timing-function: 애니메이션의 타이밍 함수
+  * ex) heart 라고 정의한 keyframes를 1.2초 간격으로 무한 반복
+    ```css
+    animation: heart 1.2s infinite linear;
+    ```
+
+## 비디오 포맷
+* MP4
+  * 고화질
+  * 브라우저 호환성이 좋음
+* WebM
+  * 웹 최적화
+  * 파일 크기 작고 빠른 스트리밍 가능
+* 호환성
+  * https://caniuse.com/?search=mp4
