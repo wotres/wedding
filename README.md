@@ -125,6 +125,9 @@
     animation: heart 1.2s infinite linear;
     ```
 
+## Reset CSS
+* 브라우저마다 기본적으로 제공하는 스타일을 초기화하여 동일한 환경에서 동일한 스타일을 적용할 수 있도록 도와주는 CSS
+  * https://meyerweb.com/eric/tools/css/reset/
 ## 비디오 포맷
 * MP4
   * 고화질
@@ -134,3 +137,27 @@
   * 파일 크기 작고 빠른 스트리밍 가능
 * 호환성
   * https://caniuse.com/?search=mp4
+* video poster
+  * 비디오 파일이 로딩되기 전에 보여지는 이미지
+* 개발참고
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+  * create react app 은 / 적으면 public 아래 바라봄
+    * /video.mp4 => public/video.mp4
+  * <vidio\> 속성
+    * autoplay: 비디오 자동 재생
+      * source 사용하면 muted 속성 필요
+    * loop: 비디오 반복 재생
+    * controls: 비디오 컨트롤러 표시
+    * muted: 비디오 음소거
+    * poster: 비디오 로딩 전에 보여지는 이미지
+
+* 적응형 비트 프로토콜(Adaptive Bitrate Protocol, ABR)
+  * 네트워크 상태에 따라 실시간 품질 조정
+
+## date 처리
+* ISO 8601 형식의 날짜 문자열을 JavaScript Date 객체로 변환
+  * import { parseISO } from 'date-fns';
+
+## React.ReactNode
+* React에서 렌더링할 수 있는 모든 요소를 포함
+* <div>뿐만 아니라 텍스트, 컴포넌트, JSX, 배열, null 등도 허용하여 선언시 받을 수 있음

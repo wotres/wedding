@@ -2,6 +2,8 @@ import classNames from 'classnames/bind'
 import { useEffect, useState } from 'react'
 import FullScreenMessage from './components/shared/FullScreenMessage'
 import styles from './App.module.scss'
+import Heading from '@components/sections/Heading'
+import Video from '@components/sections/Video'
 
 const cx = classNames.bind(styles)
 
@@ -47,7 +49,13 @@ function App() {
     return FullScreenMessage({ type: 'error' })
   }
 
-  return <div className={cx('container')}>{JSON.stringify(wedding)}</div>
+  return (
+    <div className={cx('container')}>
+      <Heading date={'2027-12-13'} />
+      <Video />
+      {JSON.stringify(wedding)}
+    </div>
+  )
 }
 
 export default App
