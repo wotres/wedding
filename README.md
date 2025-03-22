@@ -161,3 +161,62 @@
 ## React.ReactNode
 * React에서 렌더링할 수 있는 모든 요소를 포함
 * <div>뿐만 아니라 텍스트, 컴포넌트, JSX, 배열, null 등도 허용하여 선언시 받을 수 있음
+
+## grid
+* https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Grid_Layout
+
+## flicking
+* https://naver.github.io/egjs-flicking/
+
+## css
+* object-fit: cover;
+  * 이미지가 요소의 크기에 맞게 확대 또는 축소되어 보이도록 설정
+  * 이미지 비율은 유지
+  * 이미지가 요소의 크기보다 클 때 이미지를 잘라내어 보여줌
+* object-fit: contain;
+  * 이미지가 요소의 크기에 맞게 확대 또는 축소되어 보이도록 설정
+  * 이미지 비율은 유지
+  * 이미지가 요소의 크기보다 클 때 이미지를 축소하여 보여줌
+* postion relative
+  * 자식 요소의 위치를 상대적으로 설정
+  * postion absolute
+    * 부모 요소를 기준으로 자식 요소의 위치를 설정
+
+* 가상 선택자
+* ImageGallery.module.scss
+  * &::after
+    * 요소의 내용 뒤에 콘텐츠를 추가
+    * 실제 DOM 요소를 추가하지 않고도 꾸밈 요소를 삽입할 수 있어서 유용 (진짜 DOM 요소 없이 높이 공간 확보)
+    * 레이아웃을 깔끔하게 유지하면서 비율 고정 박스를 만들 수 있음
+    * 가로세로 비율을 유지하면서 이미지를 삽입할 때 사용
+      * display: block으로 공간 차지
+        * display: block을 사용하는 이유는 이 가짜 요소가 실제 공간을 차지하게 만들기 위해서
+      * content: ""으로 가상 요소 생성
+        * HTML에 실제로 존재하지 않는 가짜 요소이기 때문에, 내용이 없으면 아무것도 렌더링되지 않아서 content 속성으로 표시할 내용을 꼭 지정 ""
+      * padding-bottom: 100%로 가로세로 비율을 1:1로 설정
+  * &::before
+    * 요소의 내용 앞에 콘텐츠를 추가
+* display: block;
+  * 요소를 블록 레벨 요소로 지정
+  * padding-bottom 100% 로 주면 가로세로 비율이 1:1이 됨  
+* display: block은 공간을 확보하고, position: absolute는 그 공간 위에 정확히 배치하기 위해 사용
+  * => 두 개가 합쳐져야 비율 고정 + 정렬된 콘텐츠가 완성
+
+## uesQuery
+* 데이터 요청(fetch), 캐싱, 로딩 상태 관리, 에러 처리, 자동 재요청(refetch) 등을 간편하게 처리할 수 있는 커스텀 훅
+* react-query의 useQuery를 사용하려면, QueryClientProvider로 애플리케이션을 감싸서 QueryClient를 설정
+  * react-query는 데이터 캐싱과 상태 관리를 위한 중앙 관리자(QueryClient) 를 사용 
+  * 즉, QueryClientProvider는 이 QueryClient 인스턴스를 리액트 컴포넌트 트리 전체에 공유할 수 있도록 해주는 역할
+  * QueryClientProvider로 애플리케이션을 감싸면, 하위 컴포넌트에서 useQuery를 사용할 수 있음
+  * QueryClient는 react-query의 중앙 데이터 캐시 및 상태 관리를 담당하는 핵심 객체
+
+## 훅(Hook)
+* React 함수형 컴포넌트에서 상태(state)나 생명주기(lifecycle) 같은 기능을 사용할 수 있게 해주는 함수
+  * useState: 상태값을 관리
+  * useEffect: 컴포넌트가 렌더링될 때마다 특정 작업을 수행
+  * useContext: 상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달
+  * useReducer: 복잡한 상태 로직을 컴포넌트 밖으로 분리
+  * useCallback: 함수의 재생성을 방지(성능 최적화)
+  * useMemo: 연산된 값을 재사용(성능 최적화)
+  * useRef: 함수형 컴포넌트에서 ref를 쉽게 사용
+
