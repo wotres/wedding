@@ -220,3 +220,31 @@
   * useMemo: 연산된 값을 재사용(성능 최적화)
   * useRef: 함수형 컴포넌트에서 ref를 쉽게 사용
 
+## npm 다운로드 트렌드 확인
+* https://www.npmtrends.com/
+
+## swiper
+* https://swiperjs.com/react
+  * 이미지를 슬라이드로 보여주는 라이브러리
+* dimmed
+  * 배경을 어둡게 처리해서 포커스를 특정 요소에 주거나, 사용자 입력을 제한할 때 쓰는 반투명 레이어
+  * 모달창 띄울 때 배경 어두워지는 것
+* JSX는 하나의 루트 요소만 반환해야 함
+  * Fragment 사용
+    * <></> 또는 <React.Fragment></React.Fragment>로 묶어서 반환
+* 외부 라이브러리의 스타일을 커스터마이징 하려면 스코프를 조심
+  * swiper 스타일을 커스터마이징하려면, swiper 스타일을 덮어쓰기 위해 swiper 클래스를 사용
+  * swiper 클래스를 사용하면 swiper 라이브러리에서 사용하는 클래스와 충돌하지 않음
+
+## 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.ts(2686)
+* import React from 'react'; 추가
+* 또는 tsconfig.json 에 compilerOptions 설정 추가
+  ```json
+  // tsconfig.json
+  {
+    "compilerOptions": {
+      "jsx": "react-jsx"
+    }
+  }
+  ```
+* 또는 index.tsx 인식이 안되어서 이름지정 
