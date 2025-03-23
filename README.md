@@ -248,3 +248,16 @@
   }
   ```
 * 또는 index.tsx 인식이 안되어서 이름지정 
+
+## @mixin
+* Sass에서 반복되는 스타일을 한 번만 정의하고 필요할 때마다 @include로 불러와서 재사용
+```scss
+@mixin mixin이름 {
+  style
+}
+
+.my-class {
+  @include mixin이름;
+}
+
+```
