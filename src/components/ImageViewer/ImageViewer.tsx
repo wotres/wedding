@@ -21,7 +21,6 @@ function ImageViewer({
   selectedIdx: number
   onClose: () => void
 }) {
-  console.log(open, selectedIdx)
   if (open === false) {
     return null
   }

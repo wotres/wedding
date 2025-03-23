@@ -7,7 +7,7 @@ import Video from '@components/sections/Video'
 import ImageGallery from '@components/sections/ImageGallery'
 import Intro from '@components/sections/Intro'
 import Invitation from '@components/sections/Invitation'
-
+import Calendar from '@components/sections/Calendar'
 // import useWedding from './hooks/useWedding'
 import { Wedding } from '@models/wedding'
 
@@ -79,6 +79,7 @@ function App() {
       />
       <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
+      <Calendar date={date} />
     </div>
   )
 }
