@@ -265,3 +265,56 @@
 ## react-day-picker
 * https://react-day-picker.js.org
   * 날짜 선택을 위한 컴포넌트
+
+## kakao-map
+* https://apis.map.kakao.com/web/guide/
+* 키발급
+  * https://developers.kakao.com/console/app
+  * .env 에 추가후 .gitignore 추가
+* 활성화
+  * https://developers.kakao.com/console/app/1222425/product/kakaoMap
+* script tag 비동기로 가져오기
+  * useEffect 에서 autoload=false 로 설정
+  * script.async = true 로 설정
+  * script.onload 이벤트로 지도 생성
+    * script.onload : 스크립트가 로드되면 실행되는 이벤트
+  * 즉, 스크립트를 비동기로 가져오고, 스크립트가 로드되면 지도를 생성
+* https://map.kakao.com/ 
+  * 길찾기 주소 생성
+
+## useRef
+* useRef는 React에서 DOM 요소나 변경 가능한 값을 저장하고 참조할 때 쓰는 훅
+* DOM에 직접 접근해야 할 때 사용 (실제 <div> DOM 요소를 가리킴)
+  * ```javascript
+    const inputRef = useRef<HTMLInputElement>(null);
+    <div ref={inputRef} ></div>
+    ```
+* 컴포넌트가 리렌더링되어도 ref 객체는 계속 유지 (리렌더링 없이 값을 저장)
+  * useState는 값이 바뀌면 컴포넌트가 리렌더링되지만, useRef는 값이 바뀌어도 리렌더링되지 않음
+  * ```javascript
+    const countRef = useRef(0);
+    countRef.current += 1;
+    console.log(countRef.current); // 1
+    ```
+
+## absolute 중앙 배치
+* left: 50% 한 뒤 translateX(-50%)로 가운데 정렬 (자기자신을 또 50% 이동)
+  * ```css
+    .center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    ```
+
+## global interface
+* src/types/global.d.ts 생성
+  * ```typescript
+    declare global {
+      interface Window {
+        kakao: any;
+      }
+    }
+    ```
+* window 객체에 kakao 속성을 추가
