@@ -29,26 +29,26 @@
     "name": "깜",
     "account": {
         "bankName": "신한",
-        "accountNumber": "110-356-123433",
-        "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
+        "accountNumber": "110-000-000000",
+        "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ000"
     },
-    "phoneNumber": "01045532323",
+    "phoneNumber": "01000000000",
     "parents": [
         {
         "name": "이깜",
         "account": {
             "bankName": "농협",
-            "accountNumber": "233331-51-061400"
+            "accountNumber": "233331-00-000000"
         },
-        "phoneNumber": "01053242422"
+        "phoneNumber": "01000000000"
         },
         {
         "name": "김깜",
         "account": {
             "bankName": "농협",
-            "accountNumber": "352-1252-4559-90"
+            "accountNumber": "352-0000-0000-00"
         },
-        "phoneNumber": "01054912252"
+        "phoneNumber": "01000000000"
         }
     ]
     },
@@ -56,25 +56,25 @@
     "name": "자",
     "account": {
         "bankName": "농협",
-        "accountNumber": "352-0952-4669-11"
+        "accountNumber": "352-0000-0000-00"
     },
-    "phoneNumber": "01022345124",
+    "phoneNumber": "01000000000",
     "parents": [
         {
         "name": "이자",
         "account": {
             "bankName": "카카오뱅크",
-            "accountNumber": "3333-1112-11932"
+            "accountNumber": "3333-0000-00000"
         },
-        "phoneNumber": "01024333423"
+        "phoneNumber": "01000000000"
         },
         {
         "name": "김자",
         "account": {
             "bankName": "국민",
-            "accountNumber": "222-19-8842-472"
+            "accountNumber": "222-00-0000-000"
         },
-        "phoneNumber": "01099928884"
+        "phoneNumber": "01000000000"
         }
     ]
     },

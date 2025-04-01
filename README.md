@@ -318,3 +318,25 @@
     }
     ```
 * window 객체에 kakao 속성을 추가
+
+## Accordion (아코디언)
+* 아코디언은 여러 개의 아이템 중 하나를 선택하면 다른 아이템이 닫히는 UI 패턴
+  * https://getbootstrap.com/
+  * https://mui.com/material-ui/
+
+## 복사
+* react-copy-to-clipboard
+  * 클립보드에 텍스트를 복사하는 라이브러리
+  * https://www.npmjs.com/package/react-copy-to-clipboard
+
+## PropsWithChildren<T>
+* children을 포함한 props를 쉽게 정의하도록 도와주는 TypeScript 유틸리티 타입
+* children 을 명시적으로 작성하지 않아도 자동으로 children을 포함한 props를 정의할 수 있음
+
+## button reset style
+* button 태그의 기본 스타일을 초기화
+* https://gist.github.com/MoOx/9137295
+
+## 카카오 송금링크
+* 카카오톡 > 설정 > 관리 > 내프로필 > 송금하기QR코드
+* https://developers.kakao.com/docs/latest/ko/kakaopay/common#kakaopay-web
